@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>botstorage</AssemblyName>
+    <RootNamespace>Calloatti.BotStorage</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="CommonModSettings.props" />
+
+  <ItemGroup>
+    <Publicize Remove="Timberborn.BlueprintSystem" />
+  </ItemGroup>
+
+</Project>

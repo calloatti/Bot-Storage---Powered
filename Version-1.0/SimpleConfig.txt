@@ -1,0 +1,15 @@
+ConfigFileName = "BotStorage.txt"
+
+Key = "PowerPerBot"
+Type = "float"
+DefaultValue = 10.0
+Label = "Power Consumption Per Bot"
+Tooltip = "How much mechanical power (HP) each bot requires while in storage."
+ControlType = "Slider"
+MinValue = 0.0
+MaxValue = 100.0
+Step = 5.0
+Options = []
+AvailableIn = ["MainMenu", "Game"]
+RequiresRestart = false
+RequiresReload = false
