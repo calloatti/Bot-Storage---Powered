@@ -1,7 +1,7 @@
 {
   "Name": "Bot Storage (Powered)",
-  "Version": "1.0.6",
-  "Id": "Calloatti.BotStorage",
+  "Version": "1.0.7",
+  "Id": "Calloatti.BotStoragePowered",
   "MinimumGameVersion": "1.0.12.5",
   "Description": "Adds a storage facility where bots can be assigned to power down, halting their aging and resource consumption.",
   "RequiredMods": [

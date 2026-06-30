@@ -1,10 +1,14 @@
 {
-  "ItemId": "3695659857",
-  "Name": "Bot Storage",
+  "ItemId": "3753396144",
+  "Name": "Bot Storage (Powered)",
   "Visibility": "Public",
-  "UpdateDescription": false,
-  "UpdateVisibility": false,
-  "UpdatePreview": false,
-  "UpdateTags": false,
-  "Tags": []
+  "UpdateDescription": true,
+  "UpdateVisibility": true,
+  "UpdatePreview": true,
+  "UpdateTags": true,
+  "Tags": [
+    "Update 1.0",
+    "New content",
+    "Buildings"
+  ]
 }
