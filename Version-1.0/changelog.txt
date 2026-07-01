@@ -1,36 +1,28 @@
---------------------------------------------------------------------------------
-Game Version: 1.0.13.1
-Mod Version: 1.0.7
+Game Version: 1.0.13.1 - Mod Version: 1.0.7
 Fixed Mod Id being the same as Bot Storage, its now "Calloatti.BotStoragePowered"
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.6
+Game Version: 1.0.0.0 - Mod Version: 1.0.6
 - Forked Bot Storage mod, added power requirement to the building.
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.5
+Game Version: 1.0.0.0 - Mod Version: 1.0.5
 - Optimized deterioration checks to fix FPS drops.
 - Optimized animation logic to prevent micro-stutters.
 - Fixed loaded bots deteriorating inside the storage.
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.4
+Game Version: 1.0.0.0 - Mod Version: 1.0.4
 - Made building flippable.
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.3
+Game Version: 1.0.0.0 - Mod Version: 1.0.3
 - Fixed TemplateCollectionSpec for Whitepaws.
 - Added optional dependencies.
 - Refactored loading bothead icon.
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.2
+Game Version: 1.0.0.0 - Mod Version: 1.0.2
 - Hide No Workers warning
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.1
+Game Version: 1.0.0.0 - Mod Version: 1.0.1
 - Added missing models
 --------------------------------------------------------------------------------
-Game Version: 1.0.0.0
-Mod Version: 1.0.0
+Game Version: 1.0.0.0 - Mod Version: 1.0.0
 - Initial release
+--------------------------------------------------------------------------------
