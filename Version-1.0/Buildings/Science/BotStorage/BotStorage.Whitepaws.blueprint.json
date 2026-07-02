@@ -1,4 +1,4 @@
-{
+﻿{
   "BuildingSpec": {
     "SelectionSoundName": "Pile",
     "LoopingSoundName": "",
@@ -56,42 +56,74 @@
   "TransputProviderSpec": {
     "Transputs": [
       {
-        "Coordinates": { "X": 0, "Y": 0, "Z": 0 },
+        "Coordinates": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
         "Directions": "Left, Down, Bottom",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 1, "Y": 0, "Z": 0 },
+        "Coordinates": {
+          "X": 1,
+          "Y": 0,
+          "Z": 0
+        },
         "Directions": "Right, Down, Bottom",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 0, "Y": 4, "Z": 0 },
+        "Coordinates": {
+          "X": 0,
+          "Y": 4,
+          "Z": 0
+        },
         "Directions": "Left, Up, Bottom",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 1, "Y": 4, "Z": 0 },
+        "Coordinates": {
+          "X": 1,
+          "Y": 4,
+          "Z": 0
+        },
         "Directions": "Right, Up, Bottom",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 0, "Y": 0, "Z": 1 },
+        "Coordinates": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1
+        },
         "Directions": "Left, Down, Top",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 1, "Y": 0, "Z": 1 },
+        "Coordinates": {
+          "X": 1,
+          "Y": 0,
+          "Z": 1
+        },
         "Directions": "Right, Down, Top",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 0, "Y": 4, "Z": 1 },
+        "Coordinates": {
+          "X": 0,
+          "Y": 4,
+          "Z": 1
+        },
         "Directions": "Left, Up, Top",
         "ReverseRotation": false
       },
       {
-        "Coordinates": { "X": 1, "Y": 4, "Z": 1 },
+        "Coordinates": {
+          "X": 1,
+          "Y": 4,
+          "Z": 1
+        },
         "Directions": "Right, Up, Top",
         "ReverseRotation": false
       }
