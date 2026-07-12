@@ -12,4 +12,4 @@ Step = 5.0
 Options = []
 AvailableIn = ["MainMenu", "Game"]
 RequiresRestart = false
-RequiresReload = false
+RequiresReload = true
