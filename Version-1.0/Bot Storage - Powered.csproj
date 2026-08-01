@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Publicize Remove="Timberborn.BlueprintSystem" />
+    <Publicize Remove="Timberborn.Buildings" />
   </ItemGroup>
 
 </Project>
