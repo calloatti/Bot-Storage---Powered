@@ -1,15 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <AssemblyName>botstorage</AssemblyName>
     <RootNamespace>Calloatti.BotStorage</RootNamespace>
+    <TimberbornPath>C:\Program Files (x86)\Steam\steamapps\common\timberborn_main\Timberborn_Data\Managed</TimberbornPath>
   </PropertyGroup>
 
   <Import Project="CommonModSettings.props" />
 
   <ItemGroup>
-    <Publicize Remove="Timberborn.BlueprintSystem" />
-    <Publicize Remove="Timberborn.Buildings" />
+    <DoNotPublicize Include="Timberborn.BlueprintSystem:Timberborn.BlueprintSystem.ComponentSpec.EqualityContract" />
+    <DoNotPublicize Include="Timberborn.BlueprintSystem:Timberborn.BlueprintSystem.ComponentSpec.PrintMembers" />
+    <DoNotPublicize Include="Timberborn.Buildings:Timberborn.Buildings.PausableBuilding.PausedChanged" />
   </ItemGroup>
 
 </Project>
+

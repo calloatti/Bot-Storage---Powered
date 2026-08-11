@@ -7,7 +7,7 @@ Include ..\AGENTS.md
 - **Namespace:** `Calloatti.BotStorage`
 - **ModId:** `Calloatti.BotStoragePowered`
 - **Framework:** Harmony, Bindito DI, SimpleConfig
-- **Publicizer:** removes `Timberborn.BlueprintSystem` and `Timberborn.Buildings` (see csproj — `PausableBuilding.PausedChanged` becomes ambiguous if publicized)
+- **Publicizer:** `Timberborn.BlueprintSystem` and `Timberborn.Buildings` are publicized via `CommonModSettings.props`, with `DoNotPublicize` for `ComponentSpec.EqualityContract`/`PrintMembers` (record-inheritance CS0507 fix) and `PausableBuilding.PausedChanged` (becomes ambiguous if publicized) — see csproj
 - **Min Game Version:** 1.0.12.5 — uses `timberborn-decompiled-1.0.*`
 
 ## What This Mod Does
