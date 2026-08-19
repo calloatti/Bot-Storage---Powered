@@ -54,3 +54,8 @@ Prefix: when the deteriorating bot is in `ProtectedBots`, it has a `PowerEfficie
 - `Deteriorable.Tick` patch runs once per game **tick** per deteriorating bot. Cost is a `TryGetValue` on a `ConcurrentDictionary` plus a `Random.value` compare (powered variant only).
 - `ProtectedBots` is a static `ConcurrentDictionary`; entries are added/removed strictly via `EntererAdded`/`EntererRemoved`, so there is no drift or leak.
 - `SimpleConfig` (`PowerPerBot`) is read inside `UpdatePowerConsumption`, which runs only on events — never in a hot loop.
+
+## Hard Rule
+DO NOT EVER TOUCH THE DEPLOY FOLDER.
+
+BUILD DOES EVERYTHING, NEVER EVER MESS WITH THE DEPLOY PROCESS.

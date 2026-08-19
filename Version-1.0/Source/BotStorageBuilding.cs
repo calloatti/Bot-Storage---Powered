@@ -1,6 +1,5 @@
-using Bindito.Core;
-using HarmonyLib;
 using System.Collections.Concurrent;
+using Bindito.Core;
 using Timberborn.AssetSystem;
 using Timberborn.BaseComponentSystem;
 using Timberborn.BlockSystem;
@@ -10,27 +9,13 @@ using Timberborn.DeteriorationSystem;
 using Timberborn.EnterableSystem;
 using Timberborn.EntitySystem;
 using Timberborn.MechanicalSystem;
-using Timberborn.ModManagerScene;
 using Timberborn.NeedSystem;
-using Timberborn.StatusSystem;
 using Timberborn.TemplateInstantiation;
 using Timberborn.WorkSystem;
 using UnityEngine;
-using Calloatti.Config;
 
 namespace Calloatti.BotStorage
 {
-  public class BotStorageModStarter : IModStarter
-  {
-    public static SimpleConfig Config { get; private set; }
-
-    public void StartMod(IModEnvironment modEnvironment)
-    {
-      Config = new SimpleConfig(modEnvironment.ModPath);
-      new Harmony("calloatti.botstorage").PatchAll();
-    }
-  }
-
   public record BotStorageBuildingSpec : ComponentSpec;
 
   public class BotStorageBuilding : BaseComponent, IAwakableComponent, IInitializableEntity, IDeletableEntity
@@ -199,66 +184,6 @@ namespace Calloatti.BotStorage
         UnityEngine.Object.Destroy(_cachedMaterial);
         _cachedMaterial = null;
       }
-    }
-  }
-
-  [Context("Game")]
-  public class BotStorageConfigurator : Configurator
-  {
-    protected override void Configure()
-    {
-      Bind<BotStorageBuilding>().AsTransient();
-      Bind<BotStorageBannerSetter>().AsTransient();
-      MultiBind<TemplateModule>().ToProvider(ProvideTemplateModule).AsSingleton();
-    }
-
-    private static TemplateModule ProvideTemplateModule()
-    {
-      var builder = new TemplateModule.Builder();
-
-      builder.AddDecorator<BotStorageBuildingSpec, BotStorageBuilding>();
-      builder.AddDecorator<BotStorageBuildingSpec, WaitInsideIdlyWorkplaceBehavior>();
-      builder.AddDecorator<BotStorageBuildingSpec, BotStorageBannerSetter>();
-      builder.AddDecorator<BotStorageBuildingSpec, PausableBuilding>();
-
-      return builder.Build();
-    }
-  }
-
-  [HarmonyPatch(typeof(StatusSubject), nameof(StatusSubject.RegisterStatus))]
-  public static class PreventUnstaffedStatusPatch
-  {
-    public static bool Prefix(StatusSubject __instance, StatusToggle statusToggle)
-    {
-      if (__instance.GetComponent<BotStorageBuilding>() != null)
-      {
-        string spriteName = statusToggle.StatusSpecification.SpriteName ?? "";
-
-        if (spriteName.Contains("NoUnemployed"))
-        {
-          return false;
-        }
-      }
-      return true;
-    }
-  }
-
-  [HarmonyPatch(typeof(Deteriorable), nameof(Deteriorable.Tick))]
-  public static class DeteriorableTickPatch
-  {
-    public static bool Prefix(Deteriorable __instance)
-    {
-      if (BotStorageBuilding.ProtectedBots.TryGetValue(__instance, out var storage))
-      {
-        // Generates a float between 0.0 and 1.0. 
-        // If efficiency is 0.75, there is a 75% chance to skip deterioration this tick.
-        if (UnityEngine.Random.value < storage.PowerEfficiency)
-        {
-          return false; // Skip the tick (no deterioration)
-        }
-      }
-
-      return true; // Let vanilla deterioration happen
     }
   }
 }
