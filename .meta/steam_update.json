@@ -1,10 +1,10 @@
 {
-  "ItemId": "3753396144",
-  "ContentFolder": "C:/Users/calloatti/Documents/Timberborn/Mods/Bot Storage - Powered",
   "Visibility": "public",
-  "DepsFile": "C:/Users/calloatti/source/repos/Mods/Bot Storage - Powered/.meta/steam_deps.txt",
-  "DescriptionFile": "C:/Users/calloatti/source/repos/Mods/Bot Storage - Powered/.meta/steam_description.txt",
   "TagsFile": "C:/Users/calloatti/source/repos/Mods/Bot Storage - Powered/.meta/steam_tags.txt",
+  "PreviewFile": "C:/Users/calloatti/Documents/Timberborn/Mods/Bot Storage - Powered/thumbnail.jpg",
   "Title": "Bot Storage (Powered)",
-  "PreviewFile": "C:/Users/calloatti/Documents/Timberborn/Mods/Bot Storage - Powered/thumbnail.jpg"
+  "DescriptionFile": "C:/Users/calloatti/source/repos/Mods/Bot Storage - Powered/.meta/steam_description.txt",
+  "DepsFile": "C:/Users/calloatti/source/repos/Mods/Bot Storage - Powered/.meta/steam_deps.txt",
+  "ContentFolder": "C:/Users/calloatti/Documents/Timberborn/Mods/Bot Storage - Powered",
+  "ItemId": "3753396144"
 }
